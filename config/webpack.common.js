@@ -11,6 +11,10 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+      },
     ],
   },
   plugins: [
@@ -23,7 +27,13 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '..src/'),
+      '@apis': path.resolve(__dirname, '../src/apis'),
+      '@components': path.resolve(__dirname, '../src/components'),
+      '@hooks': path.resolve(__dirname, '../src/hooks'),
+      '@images': path.resolve(__dirname, '../src/images'),
+      '@lib': path.resolve(__dirname, '../src/lib'),
+      '@pages': path.resolve(__dirname, '../src/pages'),
+      '@styles': path.resolve(__dirname, '../src/styles'),
     },
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
   },
