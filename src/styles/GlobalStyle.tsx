@@ -134,7 +134,6 @@ html {
   margin: 0 auto;
   font-size: 62.5%;
   box-sizing: border-box;
-  height: 100%;
   background-color: #191623;
 }
 `;
